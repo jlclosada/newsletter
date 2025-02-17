@@ -17,11 +17,11 @@ DAILY_CONTENT = {
     "unsubscribe_url": "https://yourdomain.com/subscribe"
 }
 
-@app.route('/api/send-daily-emails', metthod = ['POST'])
+@app.route('/api/send-daily-emails', methods = ['POST'])
 def send_daily_emails():
     # in production, get suscribers from database
     subscribers = ["jlcaclosada@gmail.com", "wysso10@gmail.com"]
-    html_content = render_template('email_tempalte.html', **DAILY_CONTENT)
+    html_content = render_template('email_template.html', **DAILY_CONTENT)
 
     for email in subscribers:
         resend.emails.send({
