@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Disparar endpoint de envío de correos
         run: |
-          curl -X POST https://tu-app.vercel.app/api/send-daily-emails
+          curl -X POST https://https://newsletter-git-main-jose-caceres-projects-544e702e.vercel.app/api/send-daily-emails
