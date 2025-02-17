@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container { max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; }
+        .header { background: #f3f4f6; padding: 20px; text-align: center; }
+        .content { padding: 30px; line-height: 1.6; color: #374151; }
+        .section { margin-bottom: 30px; }
+        .quote { font-style: italic; color: #3b82f6; }
+        .button { background: #3b82f6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your Daily Wellness Digest 🌱</h1>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <p class="quote">"{{ quote }}"</p>
+            </div>
+
+            <div class="section">
+                <h2>Today's Advice 💡</h2>
+                <p>{{ advice }}</p>
+            </div>
+
+            <div class="section">
+                <h2>Science-Backed Habit 🧪</h2>
+                <p>{{ habit }}</p>
+            </div>
+
+            <div class="section">
+                <h2>Healthy Recipe 🥗</h2>
+                <h3>{{ recipe_name }}</h3>
+                <p>{{ recipe_content }}</p>
+            </div>
+
+            <div class="section">
+                <p>Stay healthy tomorrow! We'll see you then! ❤️</p>
+                <p>Not subscribed? <a href="{{ unsubscribe_url }}" class="button">Join Now</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
