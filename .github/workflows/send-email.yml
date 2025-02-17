@@ -1,0 +1,14 @@
+name: Envío diario de correos
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Se ejecuta a las 9:00 AM UTC cada día (ajusta según tu zona horaria)
+  workflow_dispatch:  # Permite dispararlo manualmente
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar endpoint de envío de correos
+        run: |
+          curl -X POST https://tu-app.vercel.app/api/send-daily-emails
